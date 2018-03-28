@@ -12,6 +12,7 @@ class Device : public Abstract
 public:
     Device();
     Device(char *N, char *I, double W);
+    Device(char *N, char *I, double W, char *n, double dL, double uL, double e);
     void setWeight(double W);
     void setMeasure();
     void setMeasure(char *n, double dL, double uL, double e);

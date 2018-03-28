@@ -15,6 +15,7 @@ Abstract::Abstract()
 
 Abstract::Abstract(char *n, char *i)
 {
+    //cout << "ABSTRACT CONSTRUCTOR" << endl;
     name = new char[strlen(n) + 1];
     strcpy(name, n);
     instance = new char[strlen(i) + 1];
@@ -55,4 +56,5 @@ Abstract::~Abstract()
 {
     delete name;
     delete instance;
+    //cout << "ABSTRACT DESTRUCTOR" << endl;
 }

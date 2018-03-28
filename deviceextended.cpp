@@ -10,6 +10,7 @@ DeviceExtended::DeviceExtended() : Device()
 
 DeviceExtended::DeviceExtended(char *N, char *I, double W, double C) : Device(N, I, W)
 {
+    //cout << "DEVICEEXTENDED CONSTRUCTOR" << endl;
     cost = C;
 }
 
@@ -33,5 +34,5 @@ double DeviceExtended::getCost()
 
 DeviceExtended::~DeviceExtended()
 {
-
+    //cout << "DEVICEEXTENDED DESTRUCTOR" << endl;
 }

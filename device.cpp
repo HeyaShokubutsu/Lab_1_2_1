@@ -5,12 +5,21 @@ Device::Device(): Abstract()
     double W;
     cout << "Set device weight:" << endl;
     cin >> W;
+    Device::setMeasure();
     weight = W;
 }
 
 Device::Device(char *N, char *I, double W): Abstract(N, I)
 {
     weight = W;
+    //cout << "DEVICE CONSTRUCTOR" << endl;
+}
+
+Device::Device(char *N, char *I, double W, char *n, double dL, double uL, double e) : Abstract(N, I)
+{
+    weight = W;
+    Device::setMeasure(n, dL, uL, e);
+    //cout << "DEVICE WITH MEASURE CONSTRUCTOR" << endl;
 }
 
 void Device::setMeasure()
@@ -67,4 +76,6 @@ Measurement Device::getMeasure(int num)
 Device::~Device()
 {
     measure.erase(measure.begin(), measure.end());
+    measure.clear();
+    //cout << "DEVICE DESTRUCTOR" << endl;
 }
